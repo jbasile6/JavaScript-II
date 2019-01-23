@@ -126,3 +126,4 @@ let newDonAmount = runners.reduce(function (total, currentValue) {
     return total + currentValue.donation;
 }, 0);
 console.log(newDonAmount * 2);
+//sorry this seems like a cop-out, planned on doing something a little more complex but just ran out of time
