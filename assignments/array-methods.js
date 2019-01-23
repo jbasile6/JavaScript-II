@@ -101,8 +101,28 @@ console.log(ticketPriceTotal);
 //I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  
 //Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1 Auto-generate a thank you message that will thank the runner by name for their exact donation amount.
+let thankYous = [];
+runners.forEach(function(zzz) {
+    return thankYous.push(`Thank you ${zzz.first_name} for your genorous $${zzz.donation} donation!`);
+})
 
-// Problem 2
+console.log(thankYous);
 
-// Problem 3
+// Problem 2 Put a list of last names in alphabetical order
+let alphabetLastName = [];
+runners.forEach(function(xyz) {
+    alphabetLastName.push(xyz.last_name);
+    alphabetLastName.sort();
+    
+})
+
+console.log(alphabetLastName);
+
+
+// Problem 3 Sponsor has promised to match the amount donated by each person, correct the donations amount
+
+let newDonAmount = runners.reduce(function (total, currentValue) {
+    return total + currentValue.donation;
+}, 0);
+console.log(newDonAmount * 2);
